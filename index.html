@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
+    <header class="header"></header>
+    <section class="todo">
+      <div class="container">
+        <h1 class="todo__title">Todo List</h1>
+        <form class="todo__form" action="">
+          <h2 class="todo__form-title">Add new task</h2>
+          <div class="todo__form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Task title"
+              data-message="*Title must be at least 3 chars"
+            />
+            <span class="todo__form-error"></span>
+          </div>
+          <div class="todo__form-group">
+            <textarea
+              name="descr"
+              rows="5"
+              placeholder="Task text"
+              data-message="*Text must be at least 10 chars"
+            ></textarea>
+            <span class="todo__form-error"></span>
+          </div>
+          <button disabled class="btn btn--black">Add task</button>
+        </form>
+        <div class="todo__filter">
+          <p>Filter: &nbsp; All</p>
+          <ul class="todo__filter-list">
+            <li class="all">All</li>
+            <li class="new">New</li>
+            <li class="old">Old</li>
+            <li class="completed">Completed</li>
+            <li class="uncompleted">Uncompleted</li>
+          </ul>
+        </div>
+        <!--  <span class="margin"></span> -->
+        <ul class="todo__list"></ul>
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
