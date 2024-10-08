@@ -26,14 +26,6 @@ let tasks = [
   },
 ];
 
-/* const modifiedTasks = tasks.map((task) => ({
-  ...task,
-  status: task.completed ? "completed" : "uncompleted",
-}));
-console.log(modifiedTasks); */
-
-// CRUD - create read update delete
-
 // dom elements
 
 const todoList = getElement(".todo__list");
@@ -215,7 +207,6 @@ function updateTasksInLS() {
 
 function onToggleFilter({ target }) {
   target.nextElementSibling.classList.toggle("active");
-  /////////
   todoList.classList.toggle("margin");
 }
 
@@ -231,7 +222,6 @@ function onChooseFilterItem({ target }) {
 
     activeFilter = target.classList[0];
     localStorage.setItem("filter", activeFilter);
-    /////////////
     todoList.classList.remove("margin");
     renderTasks(filterSortTasks());
   }
