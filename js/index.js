@@ -72,7 +72,7 @@ function getElement(selector) {
 function setActiveFilterItem() {
   const filterItem = getElement(`.todo__filter-list .${activeFilter}`);
   filterItem.classList.add("active");
-  todoFilter.innerText = `Filter:  ${
+  todoFilter.innerHTML = `Filter: &nbsp;${
     activeFilter[0].toUpperCase() + activeFilter.slice(1)
   }`;
 }
@@ -221,7 +221,7 @@ function onToggleFilter({ target }) {
 
 function onChooseFilterItem({ target }) {
   if (target.nodeName === "LI") {
-    todoFilter.innerText = `Filter:  ${target.innerText}`;
+    todoFilter.innerHTML = `Filter: &nbsp;${target.innerText}`;
     todoFilterList.classList.remove("active");
 
     for (const li of todoFilterList.children) {
